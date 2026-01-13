@@ -3,40 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STEM Works Crochet Shop</title>
+    <title>Crochet by Ayesha</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
             background: #fafafa;
             color: #333;
             text-align: center;
         }
 
         header {
-            background: #ffb6c1;
-            padding: 20px;
+            background: #ffc6d9;
+            padding: 30px 15px;
         }
 
         header h1 {
             margin: 0;
+            font-size: 32px;
         }
 
         .section {
             padding: 40px 20px;
         }
 
-        .products img {
-            width: 220px;
-            margin: 15px;
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .item-box {
+            background: white;
+            width: 250px;
+            padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .item-box img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .bottom-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+        }
+
+        .custom-img {
+            width: 280px;
+            height: 280px;
+            background: #ddd;
+            border-radius: 12px;
         }
 
         footer {
+            padding: 20px;
             background: #eee;
-            padding: 15px;
             margin-top: 40px;
         }
     </style>
@@ -44,37 +83,72 @@
 
 <body>
 
+    <!-- HEADER -->
     <header>
-        <h1>Welcome to Our Crochet Shop!</h1>
-        <p>Handmade • Trending • Updated Often</p>
+        <h1>Welcome to our website — Crochet by Ayesha</h1>
     </header>
 
+    <!-- WEARABLES SECTION -->
     <div class="section">
-        <h2>About Us</h2>
-        <p>Our crocheted plushies and wearables are handmade with care using soft, high-quality yarn. 
-        We update our collection seasonally with new, trendy creations!</p>
-    </div>
+        <h2>Wearables</h2>
+        <div class="grid">
 
-    <div class="section">
-        <h2>Featured Plushies</h2>
-        <div class="products">
-            <img src="images/plush1.png" alt="Plushie Example">
-            <img src="images/plush2.png" alt="Plushie Example">
-            <img src="images/plush3.png" alt="Plushie Example">
+            <div class="item-box">
+                <img src="images/scrunchie.png" alt="Scrunchies">
+                <h3>Scrunchies</h3>
+            </div>
+
+            <div class="item-box">
+                <img src="images/scarf.png" alt="Scarves">
+                <h3>Scarves</h3>
+            </div>
+
+            <div class="item-box">
+                <img src="images/hat.png" alt="Hats">
+                <h3>Hats</h3>
+            </div>
+
         </div>
     </div>
 
+    <!-- PLUSHIES SECTION -->
     <div class="section">
-        <h2>Wearables</h2>
-        <div class="products">
-            <img src="images/hat.png" alt="Hat">
-            <img src="images/scarf.png" alt="Scarf">
-            <img src="images/mitts.png" alt="Mitts">
+        <h2>Plushies</h2>
+        <div class="grid">
+
+            <div class="item-box">
+                <img src="images/octopus.png" alt="Octopuses">
+                <h3>Octopuses</h3>
+            </div>
+
+            <div class="item-box">
+                <img src="images/axolotl.png" alt="Axolotls">
+                <h3>Axolotls</h3>
+            </div>
+
+            <div class="item-box">
+                <img src="images/comingsoon.png" alt="More Plushies">
+                <h3>More Coming Soon</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CUSTOM ORDERS SECTION -->
+    <div class="section">
+        <h2>Custom Orders</h2>
+        <div class="bottom-box">
+            <div class="custom-img"> <!-- Placeholder for your picture --> </div>
+            <p style="max-width:300px; font-size:20px;">
+                Want something unique?  
+                We offer fully custom crochet orders!  
+                Message us to bring your ideas to life.
+            </p>
         </div>
     </div>
 
     <footer>
-        <p>© 2025 STEM Works Crochet Shop</p>
+        © 2025 Crochet by Ayesha
     </footer>
 
 </body>

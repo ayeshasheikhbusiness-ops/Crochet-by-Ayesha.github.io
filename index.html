@@ -60,6 +60,7 @@
             text-align: center;
             box-shadow: 0 2px 6px #00000015;
             font-size: 18px;
+            cursor: pointer;
         }
 
         .item img {
@@ -70,27 +71,52 @@
             box-shadow: 0 2px 8px #00000020;
         }
 
-        .custom-order {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .custom-order img {
-            width: 220px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px #00000020;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
+        .price {
+            margin-top: 8px;
+            font-size: 16px;
             color: #8c6f63;
-            font-size: 14px;
+            font-weight: bold;
         }
+
+        /* ---------- MODAL GALLERY ---------- */
+
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 999;
+            padding-top: 70px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: #000000aa;
+        }
+
+        .modal-content {
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .modal-content img {
+            width: 90%;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        .close {
+            color: #333;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 
@@ -100,6 +126,7 @@
     Crochet by Ayesha
 </header>
 
+<!-- ===================== WEARABLES ===================== -->
 <div class="section">
     <h2>Wearables</h2>
     <p>
@@ -109,23 +136,27 @@
     </p>
 
     <div class="items">
-        <div class="item">
-            Scrunchies
+        <div class="item" onclick="openGallery('Scrunchies')">
+            <strong>Scrunchies</strong>
             <img src="ylw scrun.jpg" alt="Scrunchie">
+            <div class="price">$20</div>
         </div>
 
-        <div class="item">
-            Scarves
-            <img src="https://placehold.co/200x200?text=Scarf" alt="Scarf placeholder">
+        <div class="item" onclick="openGallery('Scarves')">
+            <strong>Scarves</strong>
+            <img src="https://placehold.co/200x200?text=Scarf" alt="Scarf">
+            <div class="price">$20</div>
         </div>
 
-        <div class="item">
-            Hats
-            <img src="https://placehold.co/200x200?text=Hat" alt="Hat placeholder">
+        <div class="item" onclick="openGallery('Hats')">
+            <strong>Hats</strong>
+            <img src="https://placehold.co/200x200?text=Hat" alt="Hat">
+            <div class="price">$20</div>
         </div>
     </div>
 </div>
 
+<!-- ===================== PLUSHIES ===================== -->
 <div class="section">
     <h2>Plushies</h2>
     <p>
@@ -135,33 +166,48 @@
     </p>
 
     <div class="items">
-        <div class="item">
-            Octopuses
+        <div class="item" onclick="openGallery('Octopus')">
+            <strong>Octopuses</strong>
             <img src="ylw oct.jpg" alt="Octopus">
+            <div class="price">$15</div>
         </div>
 
-        <div class="item">
-            Axolotls
+        <div class="item" onclick="openGallery('Axolotl')">
+            <strong>Axolotls</strong>
             <img src="blue axo.jpg" alt="Axolotl">
+            <div class="price">$15</div>
         </div>
 
-        <div class="item">
-            More Coming Soon!
-            <img src="https://placehold.co/200x200?text=New+Plush" alt="More plush placeholder">
+        <div class="item" onclick="openGallery('New Plush')">
+            <strong>More Coming Soon!</strong>
+            <img src="https://placehold.co/200x200?text=New+Plush" alt="Plush">
+            <div class="price">$15</div>
         </div>
     </div>
 </div>
 
-<div class="section">
-    <h2>Custom Orders</h2>
-    <div class="custom-order">
-        <img src="https://placehold.co/250x250?text=Your+Image" alt="Custom Crochet Example">
-        <p>
-            Looking for something unique? We make custom orders!  
-            Send us your ideas and we’ll bring them to life in soft, cozy yarn.
-        </p>
+<!-- ===================== MODAL = GALLERY ===================== -->
+<div id="galleryModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeGallery()">&times;</span>
+        <h3 id="galleryTitle"></h3>
+        <!-- Placeholder alternate-color images -->
+        <img src="https://placehold.co/300x300?text=Color+1">
+        <img src="https://placehold.co/300x300?text=Color+2">
+        <img src="https://placehold.co/300x300?text=Color+3">
     </div>
 </div>
+
+<script>
+function openGallery(title) {
+    document.getElementById("galleryTitle").innerText = title + " - More Colors";
+    document.getElementById("galleryModal").style.display = "block";
+}
+
+function closeGallery() {
+    document.getElementById("galleryModal").style.display = "none";
+}
+</script>
 
 <footer>
     © 2025 Crochet by Ayesha · Handmade with love

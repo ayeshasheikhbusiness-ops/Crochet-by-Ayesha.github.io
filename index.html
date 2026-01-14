@@ -42,7 +42,6 @@
         p {
             font-size: 16px;
             color: #6b5a54;
-            margin-top: 10px;
             line-height: 1.5;
         }
 
@@ -98,15 +97,9 @@
             padding: 20px;
             background: #fff;
             border-radius: 12px;
-            width: 80%;
-            max-width: 500px;
+            width: 85%;
+            max-width: 700px;
             text-align: center;
-        }
-
-        .modal-content img {
-            width: 90%;
-            border-radius: 12px;
-            margin-bottom: 10px;
         }
 
         .close {
@@ -117,6 +110,28 @@
             cursor: pointer;
         }
 
+        .gallery-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .gallery-row img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #00000020;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #8c6f63;
+            font-size: 14px;
+        }
     </style>
 </head>
 
@@ -130,12 +145,12 @@
 <div class="section">
     <h2>Wearables</h2>
     <p>
-        Our crocheted wearables, hats, scarves, and mitts are handmade with comfort and style in mind. 
-        They’re cozy, trendy, and crafted from soft, durable yarn. 
-        We update our collection seasonally so there’s always fresh and stylish pieces to choose from.
+        Our crocheted wearables—hats, scrunchies, scarves, and more—are handmade with comfort and style in mind.
+        They're cozy, trendy, crafted from soft durable yarn, and updated seasonally so there's always something fresh.
     </p>
 
     <div class="items">
+
         <div class="item" onclick="openGallery('Scrunchies')">
             <strong>Scrunchies</strong>
             <img src="ylw scrun.jpg" alt="Scrunchie">
@@ -153,6 +168,7 @@
             <img src="https://placehold.co/200x200?text=Hat" alt="Hat">
             <div class="price">$20</div>
         </div>
+
     </div>
 </div>
 
@@ -161,40 +177,47 @@
     <h2>Plushies</h2>
     <p>
         Our crocheted plushies are handmade with care and crafted from soft, colorful yarn. 
-        They’re cute, trending, and full of personality, plus we update our collection frequently 
+        They’re cute, trending, and full of personality—plus we update our collection frequently 
         so there’s always something new to love.
     </p>
 
     <div class="items">
-        <div class="item" onclick="openGallery('Octopus')">
+
+        <div class="item" onclick="openGallery('Octopuses')">
             <strong>Octopuses</strong>
             <img src="ylw oct.jpg" alt="Octopus">
             <div class="price">$15</div>
         </div>
 
-        <div class="item" onclick="openGallery('Axolotl')">
+        <div class="item" onclick="openGallery('Axolotls')">
             <strong>Axolotls</strong>
             <img src="blue axo.jpg" alt="Axolotl">
             <div class="price">$15</div>
         </div>
 
-        <div class="item" onclick="openGallery('New Plush')">
+        <div class="item" onclick="openGallery('More Plush')">
             <strong>More Coming Soon!</strong>
             <img src="https://placehold.co/200x200?text=New+Plush" alt="Plush">
             <div class="price">$15</div>
         </div>
+
     </div>
 </div>
 
-<!-- ===================== MODAL = GALLERY ===================== -->
+<!-- ===================== MODAL GALLERY ===================== -->
 <div id="galleryModal" class="modal">
     <div class="modal-content">
+
         <span class="close" onclick="closeGallery()">&times;</span>
         <h3 id="galleryTitle"></h3>
-        <!-- Placeholder alternate-color images -->
-        <img src="https://placehold.co/300x300?text=Color+1">
-        <img src="https://placehold.co/300x300?text=Color+2">
-        <img src="https://placehold.co/300x300?text=Color+3">
+
+        <div class="gallery-row">
+            <img src="https://placehold.co/300x300?text=Color+1">
+            <img src="https://placehold.co/300x300?text=Color+2">
+            <img src="https://placehold.co/300x300?text=Color+3">
+            <img src="https://placehold.co/300x300?text=Color+4">
+        </div>
+
     </div>
 </div>
 
